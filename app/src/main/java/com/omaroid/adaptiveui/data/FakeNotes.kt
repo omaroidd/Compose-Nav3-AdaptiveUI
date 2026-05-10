@@ -1,10 +1,7 @@
 package com.omaroid.adaptiveui.data
 
-data class Note(
-    val id: Int,
-    val title: String,
-    val content: String
-)
+import com.omaroid.adaptiveui.presentation.model.Note
+
 
 val notes = listOf(
     Note(1, "Compose", "Compose is declarative UI"),
