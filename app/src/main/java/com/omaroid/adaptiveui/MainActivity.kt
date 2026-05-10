@@ -3,6 +3,9 @@ package com.omaroid.adaptiveui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.remember
+import com.omaroid.adaptiveui.presentation.adaptive.AdaptiveApp
+import com.omaroid.adaptiveui.presentation.navigation.Navigator
 
 
 class MainActivity : ComponentActivity() {
@@ -11,7 +14,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            AdaptiveApp()
+            val navigator = remember { Navigator() }
+
+            AdaptiveApp(navigator = navigator)
         }
     }
 }
